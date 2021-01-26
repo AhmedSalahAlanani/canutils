@@ -160,6 +160,9 @@ struct CANMessage final
 	 * @param data7 Data byte 8
 	 * @see CANFrameType
 	 */
+
+	//CANMessage& operator=(const CANMessage& expr) = default;
+
 	CANMessage(uint32_t id = 0, CANFrameType type = CANFrameType::Standard, uint8_t dlc = 0x00,
 			uint8_t data0 = 0, uint8_t data1 = 0, uint8_t data2 = 0,
 			uint8_t data3 = 0, uint8_t data4 = 0, uint8_t data5 = 0,
@@ -182,6 +185,8 @@ struct CANMessage final
 		data[6] = data6;
 		data[7] = data7;
 	}
+
+	CANMessage(const CANMessage& other) = default;
 	
 	/*!
 	 * Returns the CAN identifier

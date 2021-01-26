@@ -1,11 +1,9 @@
 
 #include "SocketCanInfoLinux.h"
-
-#include <cstring>
-
 #include "logger.h"
-
 #include <linux/if.h>
+#include <cstring>
+#include <stdexcept>
 
 namespace CanUtils
 {

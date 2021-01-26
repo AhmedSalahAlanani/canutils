@@ -72,7 +72,8 @@ const std::string& SocketCanImpl::getDevice() const
 int SocketCanImpl::read(CANMessage& message)
 {
 	thread_local int recvbytes;
-	memset(&message, 0x00, sizeof(CANMessage));
+	//memset(&message, 0x00, sizeof(CANMessage));
+	message = {}; // clear it
 
 	if (isOpen() == false)
 	{

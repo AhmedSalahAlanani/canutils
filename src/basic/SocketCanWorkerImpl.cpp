@@ -5,9 +5,10 @@
  *      Author: rauser
  */
 
-#include "SocketCanWorkerImpl.h"
 
+#include "SocketCanWorkerImpl.h"
 #include "logger.h"
+#include <stdexcept>
 
 namespace CanUtils
 {

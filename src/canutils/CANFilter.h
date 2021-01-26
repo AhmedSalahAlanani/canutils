@@ -25,6 +25,8 @@ struct CANFilter
 		can_id = id;
 		can_mask = mask;
 	}
+	CANFilter(const CANFilter& other) = default;
+
 
 	void invert()
 	{

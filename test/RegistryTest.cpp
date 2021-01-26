@@ -79,14 +79,14 @@ TEST_F( RegistryTest, create_unknown )
     EXPECT_THROW( registry.get("unknown"), UndefinedKeyException<std::string> );
     
     try { registry.get("unknown"); }
-    catch ( UndefinedKeyException<std::string> e )
+    catch ( UndefinedKeyException<std::string>& e )
     {
         EXPECT_EQ( "Key is not defined", std::string(e.what()) );
         EXPECT_EQ( "unknown",            std::string(e.key() ) );
     }
     
     try { registry.get("DerivedBar"); }
-    catch ( UndefinedKeyException<std::string> e )
+    catch ( UndefinedKeyException<std::string>& e )
     {
         EXPECT_EQ( "Key is not defined", std::string(e.what()) );
         EXPECT_EQ( "DerivedBar",         std::string(e.key() ) );
