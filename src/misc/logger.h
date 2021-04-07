@@ -8,7 +8,7 @@
 #ifndef SRC_MISC_LOGGER_H_
 #define SRC_MISC_LOGGER_H_
 
-#define DEBUG_CONSOLE
+//#define DEBUG_CONSOLE
 
 #ifdef DEBUG_CONSOLE
 	#include <stdio.h>
